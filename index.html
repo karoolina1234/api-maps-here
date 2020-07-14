@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Exemplo Api HERE</title>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css.css" media="screen" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+<div class="container-md ">
+  <div style="width: 400px; height: 300px" id="mapContainer" class="text-center">
+  <script src="rota.js"></script>
+  
+    <form id="form" >
+        <div class="form-group">
+          <div class="col">
+              <input type="text" id="endereco" placeholder="Rua Olinda, 140" class="form-control" >
+          </div>
+          <br>
+          <h3 class="text-center"><b>Confirme o seu local </b></h3>
+          <p>Ajude o seu prestador a localiza-lo mais rapidamente, ajuste sua localização acima</p>
+          <button type="submit" class="btn btn-lg">
+                  Confirme o local da ocorrência  <span class="glyphicon glyphicon-arrow-right"></span>
+                  
+          </button>
+      </div>
+    </form>
+  <script>
+      const form = document.getElementById('form')
+      form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const input = document.getElementById("endereco").value + ", Brazil"
+      geocodingParams = { searchText: input };
+      geocoder.geocode(geocodingParams, onResult);
+
+    })
+  </script>
+  </div>
+
+    <div class="container col-md-5" id="img">
+      <img src="./img/volkswagen-vw-logo.png" >
+
+      <table class="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Placa</th>
+            <th scope="col">Protocolo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row"></th>
+            <td>IXS-8269</td>
+            <td>1457845856894</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+    
+
+</div>
+</body>
+
+</html>

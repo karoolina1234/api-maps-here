@@ -1,0 +1,51 @@
+#mapContainer{
+    font-family: 'Barlow', sans-serif;
+    color: #091D3C;
+}
+.container-md{
+ float: right;
+ width: 70%; 
+}
+
+
+#endereco{
+    background-color: #DFDFDF;
+    color: #091D3C;
+    -webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-o-border-radius: 50px;
+	-ms-border-radius: 50px;
+    border-radius: 50px;
+    
+}
+
+.btn{
+    background-color:#091D3C ;
+    color: white;
+    -webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-o-border-radius: 50px;
+	-ms-border-radius: 50px;
+    border-radius: 50px;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: -72px;
+ 
+}
+
+#img{
+    position: absolute;
+	left: 30%;
+	top: 80%
+}
+
+table{
+    position: absolute;
+    left: 4%;
+    top: -99%;
+}
+
